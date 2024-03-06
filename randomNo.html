@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+    <style>
+        body{
+            background-color: aqua;
+
+        }
+        h1{
+            background-color: wheat;
+            padding: 5px;
+            text-align: center;
+        }
+        #generate{
+            background-color: blue;
+            padding: 5px;
+           font-size: 20px;
+            margin-top: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        #guess{
+            background-color: red;
+            padding: 5px;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+        #random{
+            position: relative;
+            /* grid-column: span 4; */
+            left: 10px;
+            height: 30px;
+            width: calc(100%-20px);
+            border: none;
+            outline: none;
+            background: #d3d6c3;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0,0.75);
+            text-align: center;
+            padding: 10px;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wellcome to Random number Generator game from 0 to 99</h1>
+    <center>
+        <input id="random" type="text" readonly>
+    </center>
+    <center>
+        <button id="generate" >Generate a Random Number</button>
+        <br><br>
+        
+
+
+         <!-- <p>Every time you click the button, getRndInteger(min, max) returns a random number between 1 and 10 (both included):</p>
+
+        <button onclick="document.getElementById('demo').innerHTML = getRndInteger(1,10)">Click Me</button>
+
+<p id="demo"></p> -->
+
+
+    </center>
+
+    <script>
+        document.getElementById("generate").addEventListener("click" , function(){
+           document.getElementById("random").value = Math.floor(Math.random() * 100); // This generate integer number between 0 to 10
+           // document.getElementById("random").value = Math.random() * 100; // this crate any number b/n 0 to 100
+            // document.getElementById("random").value =Math.random(); // this crate any number b/n 0 to 1
+        });
+
+
+        // function getRndInteger(min, max) {
+        //     return Math.floor(Math.random() * (max - min + 1) ) + min;
+        //     }
+    </script>
+</body>
+</html>
